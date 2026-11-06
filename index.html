@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tahmid's Cool Website Dashboard</title>
+  <style>
+    body {
+      background-color: #BDBBFC; 
+      color: #0F0C0B;
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    #defaultBlock {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: left;
+      margin: 0 auto; 
+    }
+
+    .column {
+      height: 600px; 
+      width: 300px;  
+      padding: 10px;
+      box-sizing: border-box; 
+    }
+
+    #block1 {
+      background-color: #F54927;
+    }
+
+    #block2 {
+      background-color: #304373;
+    }
+
+    #block3 {
+      background-color: #5F93F5;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+  
+  <!-- p5.js and external libraries loaded in <head> -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.2/lib/p5.min.js"></script>
+  <script src="sketch.js"></script>
+</head>
+<body>
+
+  <h2>SnowShady</h2>
+
+  <main id="defaultBlock">
+    <div id="block1" class="column">
+      <h2>Until Christmas</h2>
+      <iframe style="width:100%;max-width:360px;height:360px;"
+              src="https://stopwatch-app.com/widget/countdown?theme=dark&color=red&title=Merry%20Christmas!&date=2026-12-25T00%3A00" 
+              frameborder="0"></iframe>
+    </div>
+
+    <div id="block2" class="column">
+      <h2>World Clock</h2>
+      <iframe style="width:100%;max-width:400px;height:360px;"
+              src="https://stopwatch-app.com/widget/clock?theme=dark&color=indigo&format=12&city=ca%2Ftoronto" 
+              frameborder="0"></iframe>
+    </div>
+
+    <div id="block3" class="column">
+      <h2>The Weather</h2>
+      <a class="weatherwidget-io" href="https://forecast7.com/en/43d65n79d38/toronto/" data-label_1="TORONTO" data-label_2="WEATHER" data-theme="original">TORONTO WEATHER</a>
+      <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+      </script>
+    </div>
+  </main>
+
+</body>
+</html>
